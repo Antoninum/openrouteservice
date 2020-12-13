@@ -71,6 +71,8 @@ public class ORSDefaultFlagEncoderFactory extends DefaultFlagEncoderFactory impl
 
             case FlagEncoderNames.PEDESTRIAN_ORS:
                 return new org.heigit.ors.routing.graphhopper.extensions.flagencoders.PedestrianFlagEncoder(configuration);
+            case FlagEncoderNames.PEDESTRIAN_SUMMER_ORS:
+                return new org.heigit.ors.routing.graphhopper.extensions.flagencoders.PedestrianSummerFlagEncoder(configuration);
 
             case FlagEncoderNames.HIKING_ORS:
                 return new org.heigit.ors.routing.graphhopper.extensions.flagencoders.HikingFlagEncoder(configuration);

@@ -36,6 +36,7 @@ public class RoutingProfileType {
 
     // WALKING STUFF
     public static final int FOOT_WALKING = 20;
+    public static final int FOOT_WALKING_SUMMER = 60;
     public static final int FOOT_HIKING = 21;
     public static final int FOOT_JOGGING = 24;
 
@@ -76,6 +77,7 @@ public class RoutingProfileType {
 
     public static boolean isWalking(int routePref) {
         return routePref == FOOT_WALKING
+            || routePref == FOOT_WALKING_SUMMER
             || routePref == FOOT_HIKING
             || routePref == FOOT_JOGGING
             || routePref == GH_FOOT
@@ -129,6 +131,8 @@ public class RoutingProfileType {
 
             case FOOT_WALKING:
                 return "foot-walking";
+            case FOOT_WALKING_SUMMER:
+                return "foot-walking-summer";
             case FOOT_HIKING:
                 return "foot-hiking";
             case FOOT_JOGGING:
@@ -184,6 +188,8 @@ public class RoutingProfileType {
 
             case "foot-walking":
                 return FOOT_WALKING;
+            case "foot-walking-summer":
+                return FOOT_WALKING_SUMMER;
             case "foot-hiking":
                 return FOOT_HIKING;
             case "foot-jogging":
@@ -247,6 +253,9 @@ public class RoutingProfileType {
 
             case RoutingProfileType.FOOT_WALKING:
                 return FlagEncoderNames.PEDESTRIAN_ORS;
+
+            case RoutingProfileType.FOOT_WALKING_SUMMER:
+                return FlagEncoderNames.PEDESTRIAN_SUMMER_ORS;
 
             case RoutingProfileType.FOOT_HIKING:
                 return FlagEncoderNames.HIKING_ORS;

@@ -17,19 +17,19 @@ package org.heigit.ors.routing.graphhopper.extensions.flagencoders;
 
 import com.graphhopper.util.PMap;
 
-public class PedestrianFlagEncoder extends FootFlagEncoder {
+public class PedestrianSummerFlagEncoder extends FootFlagEncoder {
 
-    public PedestrianFlagEncoder(PMap properties) {
+    public PedestrianSummerFlagEncoder(PMap properties) {
         this((int) properties.getLong("speedBits", 4),
                 properties.getDouble("speedFactor", 1));
         this.properties = properties;
         this.setBlockFords(properties.getBool("block_fords", true));
     }
 
-    private PedestrianFlagEncoder(int speedBits, double speedFactor) {
+    private PedestrianSummerFlagEncoder(int speedBits, double speedFactor) {
         super(speedBits, speedFactor);
 
-        //suitableSacScales.add("hiking");
+        suitableSacScales.add("hiking");
 
         init();
     }
@@ -42,6 +42,6 @@ public class PedestrianFlagEncoder extends FootFlagEncoder {
 
     @Override
     public String toString() {
-        return FlagEncoderNames.PEDESTRIAN_ORS;
+        return FlagEncoderNames.PEDESTRIAN_SUMMER_ORS;
     }
 }

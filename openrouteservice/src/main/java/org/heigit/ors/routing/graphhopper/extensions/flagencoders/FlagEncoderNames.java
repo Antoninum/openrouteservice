@@ -15,6 +15,7 @@ public class FlagEncoderNames {
     public static final String BIKE_ELECTRO     = "electrobike";
 
     public static final String PEDESTRIAN_ORS   = "pedestrian-ors";
+    public static final String PEDESTRIAN_SUMMER_ORS   = "pedestrian-summer-ors";
     public static final String HIKING_ORS       = "hiking-ors";
 
 
