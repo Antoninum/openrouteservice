@@ -95,12 +95,13 @@ public class CarFlagEncoder extends VehicleFlagEncoder {
         }
 
         if ("track".equals(highwayValue)) {
-            String tt = way.getTag("tracktype");
-            if (tt != null) {
-            	int grade = getTrackGradeLevel(tt);
-            	if (grade > maxTrackGradeLevel)
-                    return EncodingManager.Access.CAN_SKIP;
-            }
+//            String tt = way.getTag("tracktype");
+//            if (tt != null) {
+//            	int grade = getTrackGradeLevel(tt);
+//            	if (grade > maxTrackGradeLevel)
+//                    return EncodingManager.Access.CAN_SKIP;
+//            }
+            return EncodingManager.Access.CAN_SKIP;
         }
 
         if (!speedLimitHandler.hasSpeedValue(highwayValue))
